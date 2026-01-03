@@ -12,12 +12,17 @@
 
     <body>
         <header>
-            <div id="profile-pic"></div> <!-- Remplazar por imagen -->
+            <picture id="profile-pic">
+                <source media="(max-width: 700px)" srcset="assets/images/rectangulo-vertical.jpg" width="300" height="400">
+                <source media="(max-width: 1200px)" srcset="assets/images/cuadrado.jpg" width="400" height="400">
+                <img src="assets/images/cuadrado.jpg" width="500" height="500">
+            </picture>
             <div id="about-me">
                 <h2>About me</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             </div>
         </header>
+        <div id="header-shape"></div>
 
         <main>
             <h2>My work</h2>
@@ -29,10 +34,18 @@
                 <h2>Contact me</h2>
                 <p>Please get in touch if you think our <br> work could be mutually beneficial!</p>
                 <p>1234 Random Road <br> Random Town, California 12345</p>
-                <p>555-555-5555</p>
-                <p>ashleywilliams.is.not.real@gmail.com</p>
+                <p><img src="assets/icons/phone-outline.svg" width="24" height="24"> 555-555-5555</p>
+                <p><img src="assets/icons/email-outline.svg" width="24" height="24">ashleywilliams.is.not.real@gmail.com</p>
+                <nav>
+                    <a href=""></a><img src="assets/icons/github-original.svg" width="32" height="32">
+                    <a href=""></a><img src="assets/icons/linkedin-plain.svg" width="32" height="32">
+                    <a href=""></a><img src="assets/icons/twitter-original.svg" width="32" height="32">
+                </nav>
             </div>
-            <div id="second-pic"></div> <!-- Remplazar por imagen -->
+            <picture id="second-pic">
+                <source media="(max-width: 1200px)" srcset="assets/images/rectangulo-vertical.jpg" width="350" height="400">
+                <img src="assets/images/rectangulo-horizontal.jpg" width="800" height="500">
+            </picture>
         </footer>
     </body>
 </html>

@@ -1,39 +1,82 @@
-:root {
-    font-size: 16px;
+/* fonts */
+
+@font-face {
+    font-family: "playfair-display";
+    src: url(assets/fonts/playfair-display.ttf);
 }
+
+@font-face {
+    font-family: "roboto";
+    src: url(assets/fonts/roboto.ttf);
+}
+
+
+:root {
+    /* colors */
+    --blue: #0891b2;
+    --gray: #575655;
+    --red: #9e1c1c;
+    --purple: #7c75ca;
+    --green: #5e8f4d;
+    --pink: #c363b4;
+    --orange: #d88f39;
+    --blue-light: #4ba2d2;
+
+    font-size: 16px;
+    font-family: "roboto", sans-serif;
+}
+
 
 header, main, footer {
     padding: 64px 96px;
 }
 
 header {
-    background-color: blue;
     display: flex;
     align-items: center;
+}
+
+#header-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 628px;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    background-color: var(--blue);
 }
 
 #profile-pic {
     flex: 0 0 auto;
     width: 500px;
     height: 500px;
-    border: 1px solid black;
 }
 
 #about-me {
     background-color: white;
+    padding: 32px;
+    min-height: 300px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0,40%);
 
     > h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-family: "playfair-display";
+        font-weight: lighter;
+        margin-bottom: 8px;
     }
 
     > p {
         font-size: 1.5rem;
+        line-height: 1.5;
+        color: var(--gray);
+        margin-bottom: auto;
     }
 }
 
 main {
     > h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -43,7 +86,7 @@ main {
 }
 
 footer {
-    background-color: blue;
+    background-color: var(--blue);
     display: flex;
     justify-content: space-between;
     gap: 32px;
@@ -51,21 +94,30 @@ footer {
 
 #contact-info {
     flex: 0 1 auto;
+    color: white;
 
     > h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-family: "playfair-display";
+        font-weight: lighter;
     }
 
     > p {
         font-size: 1.5rem;
         margin: 32px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        > img {
+            filter: invert(100%);
+        }
     }
 }
 
 #second-pic {
     flex: 0 2 800px;
     height: 500px;
-    border: 1px solid black;
 }
 
 
@@ -84,6 +136,7 @@ footer {
         width: 400px;
         height: 400px;
         float: left;
+        margin: 0 16px 16px 0;
     }
 
     #about-me {
@@ -130,7 +183,5 @@ footer {
 
     #second-pic {
         flex: 0 0 auto;
-        width: 100%;
-        height: 400px;
     }
 }
