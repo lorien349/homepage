@@ -177,7 +177,7 @@ footer {
         gap: 16px;
     }
 
-    #contact-info > p:last-child {
+    #contact-info > p:nth-child(5) {
         line-break: anywhere;
     }
 
