@@ -193,7 +193,7 @@ footer {
 }
 
 #second-pic {
-    flex: 0 2 800px;
+    flex: 0 2 750px;
     height: 500px;
 }
 
@@ -226,7 +226,7 @@ footer {
     }
 
     #second-pic {
-        max-width: 350px;
+        max-width: 300px;
         height: 400px;
     }
 }
