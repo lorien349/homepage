@@ -77,12 +77,84 @@ header {
 main {
     > h2 {
         font-size: 2.5rem;
+        font-family: "playfair-display";
+        font-weight: lighter;
+        margin-bottom: 16px;
     }
 }
 
 #my-work {
-    height: 500px;
-    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    justify-items: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    min-height: 400px;
+    max-width: 300px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0,40%);
+
+    > div:first-child {
+        height: 200px;
+        font-family: "playfair-display";
+        font-weight: lighter;
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+
+    > div:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0;
+    }
+
+     h3 {
+        font-family: "playfair-display";
+        font-size: 1.5rem;
+        font-weight: lighter;
+     }
+
+     nav {
+        display: flex;
+        gap: 8px;
+     }
+
+     p {
+        color: var(--gray);
+     }
+}
+
+.project:nth-child(1) > div:first-child {
+    background-color: var(--red);
+}
+
+.project:nth-child(2) > div:first-child {
+    background-color: var(--purple);
+}
+
+.project:nth-child(3) > div:first-child {
+    background-color: var(--green);
+}
+
+.project:nth-child(4) > div:first-child {
+    background-color: var(--pink);
+}
+
+.project:nth-child(5) > div:first-child {
+    background-color: var(--orange);
+}
+
+.project:nth-child(6) > div:first-child {
+    background-color: var(--blue-light);
 }
 
 footer {
@@ -112,6 +184,11 @@ footer {
         > img {
             filter: invert(100%);
         }
+    }
+
+    > nav {
+        display: flex;
+        gap: 16px;
     }
 }
 
@@ -144,6 +221,10 @@ footer {
         min-height: 500px;
     }
 
+    #my-work {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     #second-pic {
         max-width: 350px;
         height: 400px;
@@ -170,6 +251,11 @@ footer {
         margin: 0;
     }
 
+    #my-work {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
     footer {
         display: flex;
         flex-direction: column;
@@ -177,8 +263,8 @@ footer {
         gap: 16px;
     }
 
-    #contact-info > p:nth-child(5) {
-        line-break: anywhere;
+    #contact-info > nav {
+        justify-content: center;
     }
 
     #second-pic {
